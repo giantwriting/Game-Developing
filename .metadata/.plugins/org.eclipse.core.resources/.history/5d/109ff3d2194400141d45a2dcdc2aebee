@@ -18,13 +18,7 @@ public class Screen extends JPanel implements Runnable{
 	
 	@Override
 	public void run() {
-	
-		int TICKS_PER_SECONDS = 60;
-		int FRAMES_PER_SECONDS = 60;
-		
-		while(true) {
-			
-		}
+		System.out.println("Hello");
 		
 	}
 

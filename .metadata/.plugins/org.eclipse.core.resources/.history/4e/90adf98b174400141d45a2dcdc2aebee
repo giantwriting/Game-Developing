@@ -1,0 +1,29 @@
+package com.giantwriting.developing;
+
+import javax.swing.*;
+
+public class Screen extends JPanel Runnable{
+
+		
+	
+
+	
+
+	
+	
+	public Screen(JFrame frame){
+		Thread thread = new Thread();
+		thread.start();
+	}
+	
+	
+	public void run() {
+		
+		System.out.println("55");
+		
+	}
+
+	
+	
+	
+}
