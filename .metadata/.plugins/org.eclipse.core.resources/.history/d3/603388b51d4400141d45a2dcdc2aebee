@@ -34,8 +34,8 @@ public class Screen extends JPanel implements Runnable{
 		int loops;
 		
 		// Variables to update the UPS & FPS variables
-		int frames = 0;
-		int updates = 0;
+		int frames;
+		int updates;
 		
 		while(true) {
 			loops = 0;
@@ -43,7 +43,6 @@ public class Screen extends JPanel implements Runnable{
 				update();
 				
 				next_game_tick += GAME_SKIP_TICKS;
-				updates++;
 				loops++;
 				
 			}

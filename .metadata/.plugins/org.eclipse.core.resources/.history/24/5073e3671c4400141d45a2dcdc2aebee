@@ -12,11 +12,6 @@ public class Screen extends JPanel implements Runnable{
 		thread = new Thread();
 		thread.start();
 	}
-
-	private void update(){
-		
-	}
-	
 	
 	@Override
 	public void run() {
@@ -29,31 +24,15 @@ public class Screen extends JPanel implements Runnable{
 		long MAX_FRAMESKIPS = 5;
 		
 		
-		long next_game_tick = System.currentTimeMillis();
-		
-		int loops;
-		
-		// Variables to update the UPS & FPS variables
-		int frames = 0;
-		int updates = 0;
-		
 		while(true) {
-			loops = 0;
-			while(System.currentTimeMillis() >  next_game_tick && loops < MAX_FRAMESKIPS){
-				update();
-				
-				next_game_tick += GAME_SKIP_TICKS;
-				updates++;
-				loops++;
-				
-			}
-			
-			
-			repaint();
+			while()
 			
 			
 		}
 		
 	}
 
+	
+	
+	
 }

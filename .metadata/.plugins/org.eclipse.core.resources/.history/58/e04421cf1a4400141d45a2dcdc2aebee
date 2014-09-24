@@ -1,0 +1,37 @@
+package com.giantwriting.developing;
+
+import javax.swing.*;
+
+public class Screen extends JPanel implements Runnable{
+	
+	Thread thread;
+
+	
+	
+	public Screen(JFrame frame){
+		thread = new Thread();
+		thread.start();
+	}
+	
+	@Override
+	public void run() {
+	
+		int UPDATES_PER_SECONDS = 60;
+		int FRAMES_PER_SECONDS = 60;
+		
+		
+		long GAME_SKIP_TICKS = 1000 / UPDATES_PER_SECONDS;
+		System.out.println(GAME_SKIP_TICKS);
+		
+		while(true) {
+			
+			
+			
+		}
+		
+	}
+
+	
+	
+	
+}

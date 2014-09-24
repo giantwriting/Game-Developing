@@ -2,11 +2,10 @@ package com.giantwriting.developing;
 
 import javax.swing.JFrame;
 
-
 public class Main {
 
 	public static void main(String args[]){
-		
+		System.out.println(GAME_SKIP_TICKS);
 		
 		// Swingutilitys.invokeLater();
 		new Main();
