@@ -25,7 +25,7 @@ public class Main {
 		
 		//Cutom Cursor
 		
-		frame.add(new Screen(frame));
+		frame.add(new Screen());
 		
 	
 		

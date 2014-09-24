@@ -1,0 +1,16 @@
+package com.giantwriting.developing;
+
+import javax.swing.JPanel;
+
+public class Screen extends JPanel Runnable {
+	
+	@Override
+	public void run() {
+		
+	}
+
+	
+	
+	
+	
+}
