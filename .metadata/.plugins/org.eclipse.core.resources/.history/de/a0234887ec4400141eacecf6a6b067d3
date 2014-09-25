@@ -1,7 +1,5 @@
 package com.giantwriting.developing;
 
-import java.awt.Toolkit;
-
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
@@ -9,8 +7,6 @@ import javax.swing.SwingUtilities;
 public class Main {
 	
 	public static final String TITLE = "Game Deving";
-	public static int SCREEN_WIDTH;
-	public static int SCREEN_HEIGHT;
 	
 
 	public static void main(String[] args){
@@ -24,11 +20,6 @@ public class Main {
     }
 	
 	public Main(){
-		
-		Toolkit toolkit = Toolkit.getDefaultToolkit();
-		SCREEN_WIDTH = toolkit.getScreenSize().width;
-		SCREEN_HEIGHT = toolkit.getScreenSize().height;
-		
 		
 		JFrame frame = new JFrame(TITLE);
 		frame.setExtendedState(JFrame.MAXIMIZED_BOTH);

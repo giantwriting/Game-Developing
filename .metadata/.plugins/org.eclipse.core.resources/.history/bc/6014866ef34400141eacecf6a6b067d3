@@ -1,11 +1,6 @@
 package com.giantwriting.developing;
 
 import java.awt.Graphics;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
 
 import javax.swing.*;
 
@@ -20,90 +15,6 @@ public class Screen extends JPanel implements Runnable{
 	
 	
 	public Screen(JFrame frame){
-		frame.addKeyListener(new KeyListener() {
-		
-				@Override
-				public void keyTyped(KeyEvent e) {
-			
-			
-				}
-
-				@Override
-				public void keyPressed(KeyEvent e) {
-					
-					
-				}
-				
-				@Override
-				public void keyReleased(KeyEvent e) {
-					
-					
-				}
-	
-
-				
-				
-	});
-
-		frame.addMouseListener(new MouseListener() {
-	
-
-				@Override
-				public void mouseClicked(MouseEvent e) {
-					
-					
-				}
-
-				@Override
-				public void mouseEntered(MouseEvent e) {
-					
-			
-					
-				}
-
-				@Override
-				public void mouseExited(MouseEvent e) {
-					
-					
-				}
-
-				@Override
-				public void mousePressed(MouseEvent e) {
-					
-					
-				}
-
-				@Override
-				public void mouseReleased(MouseEvent e) {
-			
-					
-				}
-				
-				
-		});
-		
-		frame.addMouseMotionListener(new MouseMotionListener () {
-			
-	
-
-		@Override
-		public void mouseDragged(MouseEvent e) {
-			
-			
-		}
-
-		@Override
-		public void mouseMoved(MouseEvent e) {
-			
-			
-		}
-				
-				
-				
-		});
-		
-		
-		
 		map = new Map();
 		
 		

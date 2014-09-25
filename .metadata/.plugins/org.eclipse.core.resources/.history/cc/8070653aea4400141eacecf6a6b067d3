@@ -1,0 +1,89 @@
+package com.giantwriting.developing;
+
+import javax.swing.*;
+
+public class Screen extends JPanel implements Runnable{
+	
+	Thread thread;
+
+	
+	int fps = 0;
+	int ups = 0;
+	
+	
+	public Screen(JFrame frame){
+		thread = new Thread();
+		thread.start();
+	}
+
+	private void update(){
+		
+	}
+	
+	
+	@Override
+	public void run() {
+	
+		int UPDATES_PER_SECONDS = 50;
+		int FRAMES_PER_SECONDS = 100;
+		
+		
+		long GAME_SKIP_TICKS = 1000 / UPDATES_PER_SECONDS;
+		long MAX_FRAMESKIPS = 5;
+		
+		
+		long next_game_tick = System.currentTimeMillis();
+		long next_frame_tick = System.currentTimeMillis();
+		long time = System.currentTimeMillis();
+		
+		int loops;
+		
+		// Variables to update the UPS & FPS variables
+		int frames = 0;
+		int updates = 0;
+			
+		
+		while(true) {
+			loops = 0;
+			while(System.currentTimeMillis() >  next_game_tick && loops < MAX_FRAMESKIPS){
+				update();
+				
+				next_game_tick += GAME_SKIP_TICKS;
+				updates++;
+				loops++;
+				
+				
+			}
+			
+			
+			repaint();
+			frames++;
+			
+			if(System.currentTimeMillis() > ){
+				
+				
+				
+			}
+			
+			
+			if(time+1000 <= System.currentTimeMillis()){
+				time+=1000;
+				
+				
+				fps = frames;
+				ups = updates;
+				updates = 0;
+				frames = 0;
+				
+				
+				System.out.println("FPS: " + fps);
+				System.out.println("UPS: "+ ups);
+			}
+			
+			
+			
+		}
+		
+	}
+
+}
