@@ -7,9 +7,6 @@ public class Screen extends JPanel implements Runnable{
 	Thread thread;
 
 	
-	int fps = 0;
-	int ups = 0;
-	
 	
 	public Screen(JFrame frame){
 		thread = new Thread();
@@ -33,14 +30,12 @@ public class Screen extends JPanel implements Runnable{
 		
 		
 		long next_game_tick = System.currentTimeMillis();
-		long time = System.currentTimeMillis();
 		
 		int loops;
 		
 		// Variables to update the UPS & FPS variables
 		int frames = 0;
 		int updates = 0;
-			
 		
 		while(true) {
 			loops = 0;
@@ -51,27 +46,10 @@ public class Screen extends JPanel implements Runnable{
 				updates++;
 				loops++;
 				
-				
 			}
 			
 			
 			repaint();
-			frames++;
-			
-			if(time+1000 <= System.currentTimeMillis()){
-				time+=1000;
-				
-				
-				fps = frames;
-				ups = updates;
-				updates = 0;
-				frames = 0;
-				
-				
-				System.out.println("FPS: " + fps);
-				System.out.println("UPS: "+ ups);
-			}
-			
 			
 			
 		}
